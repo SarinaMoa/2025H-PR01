@@ -174,8 +174,8 @@ def play_game(player1_y, player2_y, player1_score, player2_score, ball_x, ball_y
         
         if ball_y <= 0 or ball_y >= SCREEN_HEIGHT:
             ball_velocity_y *= -1
-        elif (ball_x < PADDLE_WIDTH and player1_y < ball_y < player1_y + PADDLE_HEIGHT):
-           ball_velocity_x *= -1
+        elif (ball_x <= PADDLE_WIDTH and player1_y < ball_y < player1_y + PADDLE_HEIGHT):
+            ball_velocity_x *= -1
         elif (ball_x + BALL_SIZE >= SCREEN_WIDTH - PADDLE_WIDTH and player2_y < ball_y < player2_y + PADDLE_HEIGHT):
            ball_velocity_x *=-1
 
